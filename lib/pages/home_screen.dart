@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:location_assignment/exports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Text(
-            "This is Home Screen",
+            "This is Home Screen\nYou Granted the Location Permission 😃",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,

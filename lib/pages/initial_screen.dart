@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:location_assignment/pages/home_screen.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:location_assignment/exports.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -12,16 +10,20 @@ class InitialScreen extends StatefulWidget {
 class _InitialScreenState extends State<InitialScreen> {
   bool isPermissionDenied = false;
 
+  // LocationController locationController = Get.put(LocationController());
+
   @override
   void initState() {
     super.initState();
     _checkLocationPermission();
+    // locationController.checkLocationPermission(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //title: Text(isPermissionDenied ? 'Permission Handler' : ''),
         title: Text(isPermissionDenied ? 'Permission Handler' : ''),
         centerTitle: true,
       ),
@@ -39,6 +41,7 @@ class _InitialScreenState extends State<InitialScreen> {
                       child: ElevatedButton(
                         onPressed: () {
                           _requestLocationPermission();
+                          // locationController.requestLocationPermission(context);
                         },
                         child: Text(
                           'Allow Permission',

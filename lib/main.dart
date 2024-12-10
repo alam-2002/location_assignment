@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:location_assignment/pages/initial_screen.dart';
+import 'package:location_assignment/exports.dart';
 
 void main() {
   runApp(const MyApp());
